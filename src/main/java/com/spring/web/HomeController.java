@@ -36,4 +36,27 @@ public class HomeController {
 		return "home";
 	}
 	
+	/*
+	 * 포워딩 테스트
+	 */
+	@RequestMapping(value = "test1", method = RequestMethod.GET)
+	public String test1(Model model) {
+		String str1 = "test1에서 저장한 문자열";
+		model.addAttribute("str1", str1);
+		
+		return "test1";
+	}
+	
+	/*
+	 * 리다이렉트 테스트
+	 */
+	@RequestMapping(value = "test2", method = RequestMethod.GET)
+	public String test2(Model model) {
+		String str2 = "test2에서 저장한 문자열";
+		model.addAttribute("str2", str2);
+		
+//		return "test1";
+//		return "redirect:test1";
+		return "forward:test1";
+	}
 }
