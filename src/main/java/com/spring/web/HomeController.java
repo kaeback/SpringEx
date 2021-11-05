@@ -60,8 +60,4 @@ public class HomeController {
 		return "forward:test1";
 	}
 	
-	@RequestMapping(value = "home2", method = RequestMethod.GET)
-	public String home2() {
-		return "home2";
-	}
 }
